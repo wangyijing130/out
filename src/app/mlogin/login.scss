@@ -1,0 +1,32 @@
+.login-form {
+  background: #f1f1f3;
+  .shadow-invalid {
+    border: 1px solid #d9534f;
+  }
+  .code-example {
+    border: 1px solid #d7d7d7;
+    overflow: hidden;
+    padding: 0;
+    text-align: center;
+    background: #fff;
+    height: 1.75rem;
+    line-height: 1.75rem;
+    span {
+      display: inline-block;
+      font-size: $font-size-xs;
+      width: 100%;
+      height: 100%;
+    }
+    img {
+      display: inline-block;
+      height: 100%;
+    }
+  }
+  .btn-changepwd {
+    color: #07202c;
+    font-size: $font-size-sm;
+  }
+  .btn-changepwd:hover, .btn-code-example:hover {
+    color: $theme;
+  }
+}

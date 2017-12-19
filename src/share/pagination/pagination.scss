@@ -1,0 +1,40 @@
+.pagination-wrap {
+  width: 100%;
+  margin: 0.5rem auto;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  .pagination-before {
+    display: inline-block;
+    padding: 1rem 0.5rem;
+    text-align: right;
+    flex-basis: 90px;
+    width: 90px;
+    select {
+      text-align: center;
+    }
+    .input-group-addon {
+      i {
+        font-size: 10px;
+      }
+    }
+  }
+  .pagination-mid {
+    display: inline-block;
+  }
+  .pagination-after {
+    display: inline-block;
+    padding: 1rem 0.5rem;
+    text-align: left;
+    flex-basis: 320px;
+    width: 320px;
+    input {
+      width: 60px;
+      text-align: center;
+      display: inline-block;
+    }
+    a:hover {
+      color: #fff;
+      background-color: $theme;
+    }
+  }
+}

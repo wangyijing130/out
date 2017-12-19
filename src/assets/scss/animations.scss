@@ -1,0 +1,179 @@
+.slide-in-right {
+    transform: translate3d(100%, 0, 0);
+}
+
+.slide-in-right.ng-enter,
+.slide-in-right > .ng-enter {
+    transition: all cubic-bezier(.1, .7, .1, 1) 400ms;
+}
+
+.slide-in-right.ng-enter-active,
+.slide-in-right > .ng-enter-active {
+    transform: translate3d(0, 0, 0);
+}
+
+.slide-in-right.ng-leave,
+.slide-in-right > .ng-leave {
+    transition: all ease-in-out 400ms;
+}
+
+.hide-no-animation.ng-leave,
+.hide-no-animation > .ng-leave {
+    transition-duration: 0ms;
+}
+
+.slide-in-left {
+    transform: translate3d(-100%, 0, 0);
+}
+
+.slide-in-left.ng-enter,
+.slide-in-left > .ng-enter {
+    transition: all cubic-bezier(.1, .7, .1, 1) 400ms;
+}
+
+.slide-in-left.ng-enter-active,
+.slide-in-left > .ng-enter-active {
+    transform: translate3d(0, 0, 0);
+}
+
+.slide-in-left.ng-leave,
+.slide-in-left > .ng-leave {
+    transition: all ease-in-out 400ms;
+}
+
+.fade-in {
+    opacity: 0;
+}
+
+.fade-in.ng-enter,
+.fade-in > .ng-enter {
+    transition: all cubic-bezier(.1, .7, .1, 1) 400ms;
+}
+
+.fade-in.ng-enter-active,
+.fade-in > .ng-enter-active {
+    opacity: 1;
+}
+
+.fade-in.ng-leave,
+.fade-in > .ng-leave {
+    transition: all ease-in-out 400ms;
+}
+
+/*弹出放大效果*/
+.move2bottom {
+    opacity: 0;
+    animation:move2bottom 3s ease;
+    animation-delay:2s;
+    animation-fill-mode:forwards;
+}
+@keyframes move2bottom  {
+    0% {transform: translate(0, -100px) ;opacity: 1;}
+    25% {transform: translate(0, -200px) scale(2);opacity: 1;}
+    100% {transform: translate(0, 0) scale(1);opacity: 1;}
+}
+/*明暗呼吸效果*/
+.breath {
+    animation-name: breath;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+@keyframes breath {
+    from { opacity: 0.1; }
+    50%  { opacity:   1; }
+    to   { opacity: 0.1; }
+}
+
+/*强调旋转**/
+.stress-rotateIn {
+    animation-duration: 3s;
+    animation-name: rotateIn;
+}
+
+@keyframes rotateIn {
+    0% {
+        transform: rotate(0deg)
+    }
+    to {
+        transform: rotate(359deg)
+    }
+}
+
+/*强调底部弹出**/
+.stress-bounceInUp {
+    animation-duration: 2s;
+    animation-name: bounceInUp
+}
+
+@keyframes bounceInUp {
+    0%, 60%, 75%, 90%, to {
+        transition-timing-function: cubic-bezier(.215, .61, .355, 1)
+    }
+    0% {
+        opacity: 0;
+        transform: translate3d(0, 3000px, 0)
+    }
+    60% {
+        opacity: 1;
+        transform: translate3d(0, -25px, 0)
+    }
+    75% {
+        transform: translate3d(0, 10px, 0)
+    }
+    90% {
+        transform: translate3d(0, -5px, 0)
+    }
+    to {
+        transform: none
+    }
+}
+
+
+.right-fade-in {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) !important;
+    animation: right-fade-in 0.5s;
+}
+
+@keyframes right-fade-in {
+    from {
+        transform: translate3d(100%, 0, 0);
+    }
+    to {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@-moz-keyframes right-fade-in {
+    from {
+        transform: translate3d(100%, 0, 0);
+    }
+    to {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.right-fade-out {
+    opacity: 1;
+    transform: translate3d(100%, 0, 0) !important;
+    animation: right-fade-out 0.5s;
+}
+
+@keyframes right-fade-out {
+    from {
+        transform: translate3d(0, 0, 0);
+    }
+    to {
+        transform: translate3d(100%, 0, 0);
+    }
+}
+
+@-moz-keyframes right-fade-out {
+    from {
+        transform: translate3d(0, 0, 0);
+    }
+    to {
+        transform: translate3d(100%, 0, 0);
+    }
+}

@@ -1,0 +1,120 @@
+
+.sidebar {
+  background: $theme-bg;
+  color: #fcfcfc;
+  padding: 0.25rem 0;
+  .card {
+    background: $theme-bg;
+  }
+
+  .list-group {
+    width: 100%;
+    .list-group-item {
+      width: 100%;
+      background: transparent;
+      padding: 0;
+      border: none;
+      cursor: pointer;
+      .list-group-item-heading {
+        display: inline-block;
+        width: 100%;
+        // height: 100%;
+        color: #fcfcfc;
+        text-align: left;
+        font-size: $font-size-sm;
+        padding: 0.5rem 0.5rem 0.5rem 1rem;
+      }
+    }
+    .has-border {
+      border-bottom: 1px solid #5e6271;
+    }
+  }
+
+  .root-group {
+    border-top: 1px solid #5e6271;
+    > .list-group-item > .list-group-item-heading {
+      transition: background 1s;
+    }
+    > .list-group-item:hover > .list-group-item-heading {
+      background: $theme;
+    }
+    > .active > .list-group-item-heading {
+      background: $theme;
+    }
+  }
+  .child-group {
+    > .list-group-item > .list-group-item-heading {
+      border-left: 4px solid transparent;
+      padding: 0.25rem 0 0.25rem 1.5rem;
+      transition: border-left 1s;
+      margin: 0.25rem 0;
+    }
+    > .list-group-item:hover > .list-group-item-heading {
+      border-left: 4px solid #5e6271;
+    }
+    > .active > .list-group-item-heading {
+      border-left: 4px solid #dedede;
+    }
+  }
+
+  .pie {
+    border-radius: 50%;
+    width: 3.4rem;
+    height: 3.4rem;
+    background: transparent;
+    border: 1px solid #01c897;
+    display: flex;
+    .first-name {
+      border-radius: 50%;
+      width: 3rem;
+      height: 3rem;
+      line-height: 3rem;
+      background: #fcfcfc;
+      color: #e40077;
+      font-size: $font-size-sm;
+      border: 1px solid #95c72d;
+    }
+  }
+}
+
+.siderbar-btn {
+  position: relative;
+  z-index: 1;
+  .btn-box {
+    position: absolute;
+    right: -8px;
+    width: 8px;
+    overflow: hidden;
+    .btn-part-top {
+      color: $theme-bg;
+      font-size: 16px;
+      padding: 0;
+      margin-bottom: -7px;
+      margin-left: 0px;
+    }
+    .btn-part-mid {
+      background: $theme-bg;
+      width: 100%;
+      height: 32px;
+      line-height: 1.75;
+      text-align: center;
+      i {
+        font-size: 8px;
+      }
+    }
+    .btn-part-bottom {
+      color: $theme-bg;
+      font-size: 16px;
+      padding: 0;
+      margin-top: -8px;
+      margin-left: 0;
+    }
+  }
+}
+
+/*
+::-webkit-scrollbar {
+  width: 1px;
+  background-color: transparent;
+  opacity: 0.8;
+}*/

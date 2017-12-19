@@ -1,0 +1,364 @@
+body {
+  font-family: "Microsoft YaHei", sans-serif;
+}
+
+a, a:hover {
+  text-decoration: none;
+}
+.textarea {
+  overflow-x: hidden;
+}
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: #999 !important;
+}
+select {
+  -ms-overflow-style: scrollbar !important;
+}
+
+.btn {
+  border: none;
+}
+
+.btn-theme {
+  background: $theme-bg;
+  color: #fff;
+}
+
+.btn-white {
+  background: #fff;
+  color: #333;
+  border: 1px solid #ddd;
+}
+
+.center-in-parent {
+  position: absolute;
+  display: inline-block;
+  left: 50%;
+  top: 50%;
+  transform: translate3d(-50%, -50%, 0);
+}
+
+.v-center-in-parent {
+  position: absolute;
+  display: inline-block;
+  top: 50%;
+  transform: translate3d(0, -50%, 0);
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.v-center {
+  display: flex;
+  align-items: center;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.fixed-bottom-right {
+  position: fixed;
+  width: 50%;
+  bottom: 0;
+  right: 0;
+  padding: 0.5rem;
+  z-index: 0;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.rolate45 {
+  transform: rotate(45deg);
+}
+
+.rolate90 {
+  transform: rotate(90deg);
+}
+
+.rolate135 {
+  transform: rotate(135deg);
+}
+
+.rolate180 {
+  transform: rotate(180deg);
+}
+
+.rolate225 {
+  transform: rotate(225deg);
+}
+
+.rolate270 {
+  transform: rotate(270deg);
+}
+
+/* 水平翻转 */
+.flipx {
+  transform: scaleX(-1);
+}
+
+/*垂直翻转*/
+.flipy {
+  transform: scaleY(-1);
+}
+
+.d-inline, .d-inline-block, .d-block, .d-table, .d-table-cell, .d-flex, .d-inline-flex {
+  &[hidden] {
+    display: none !important;
+  }
+}
+
+.shadow-1 {
+  border: 1px solid $color-border-light !important;
+  box-shadow: 0 0 2px $color-border-light;
+}
+
+.border-radius {
+  border-radius: 3px;
+}
+
+.border-radius-1 {
+  border-radius: 5px;
+}
+
+.border-radius-2 {
+  border-radius: 8px;
+}
+
+.border-radius-3 {
+  border-radius: 50%;
+}
+
+.border {
+  border-color: #ededed !important;
+}
+
+.box-shadow {
+  box-shadow: 0px 0px 10px 1px #ddd;
+}
+
+.light-title {
+  color: $color-dark;
+  border-bottom: 1px solid $color-border-blue !important;
+}
+
+
+.btn-primary {
+  background-color: $table-head-color;
+  border-color: $table-head-color;
+}
+
+.btn-primary.disabled, .btn-primary:disabled {
+  background-color: $table-head-color;
+  border-color: $table-head-color;
+}
+
+.btn-green {
+  background-color: $color-green-light;
+  border-color: $color-green-light;
+  color: #fff;
+}
+
+.btn-green.disabled, .btn-green:disabled {
+  background-color: $color-green-light;
+  border-color: $color-green-light;
+}
+
+.btn-green:hover {
+  opacity: 0.8;
+}
+
+.btn-blue {
+  background-color: $color-folder;
+  border-color: $color-folder;
+  color: #fff;
+}
+
+.btn-blue:hover {
+  opacity: 0.8;
+}
+
+.btn-round {
+  width: 3rem;
+  height: 3rem;
+  line-height: 3rem;
+  border-radius: 50%;
+  font-size: $font-size-base;
+  color: #fff !important;
+  padding: 0;
+  text-align: center;
+}
+
+.absolute-top-right{
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.absolute-bottom-right{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.sys-tree {
+  font-size: 0.875rem;
+  color: $color-base;
+  .sys-tree-root {
+    padding-left: 0.5rem;
+    .sys-tree-root-heading {
+      width: 240px;
+      padding: 0.25rem 0.5rem;
+      margin-left: 1rem;
+      cursor: pointer;
+      transition: background 0.5s;
+      .i-folder {
+        color: $color-folder;
+        font-size: $font-size-xs;
+        margin-left: -1.5rem;
+      }
+      .sys-tree-root-heading-text {
+        display: inline-block;
+        min-width: 150px;
+      }
+      a {
+        opacity: 0;
+        transition: opacity 500ms;
+      }
+    }
+    .sys-tree-root-heading:hover {
+      background: $theme;
+      span {
+        color: #fff;
+      }
+      a {
+        color: #fff;
+        opacity: 1;
+      }
+    }
+  }
+
+}
+
+.sys-tree-list-group {
+  border: none;
+  margin: 0;
+  padding: 0 0 0 0.5rem;
+  width: 100%;
+  opacity: 1;
+  .list-group-item {
+    position: relative;
+    display: block;
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+    width: 100%;
+    padding: 0.1rem 0.5rem;
+    margin: 0;
+    opacity: 1;
+    border-left: 6px solid transparent;
+    .arraw {
+      position: absolute;
+      left: -3px;
+      top: 7px;
+      font-size: 0.75rem;
+      color: #666;
+    }
+    .list-group-item-heading {
+      padding: 0.25rem 0.5rem 0.25rem 1px;
+      width: 480px;
+      margin: 0 0 0 1rem;
+      cursor: pointer;
+      transition: background 1s;
+      color: #666666;
+      i {
+        background: transparent;
+        font-size: $font-size-xs;
+        color: #ddd;
+        margin-left: -1rem;
+      }
+      .i-folder {
+        color: $color-folder;
+      }
+      .i-item {
+        color: #666666;
+      }
+
+      .list-group-item-heading-text {
+        display: inline-block;
+        min-width: 150px;
+      }
+      .btn-dropdown {
+        opacity: 0;
+        transition: opacity 500ms;
+      }
+      .btn-dropdown:after {
+        display: none;
+      }
+      .dropdown-menu {
+        background: $theme-bg;
+        font-size: $font-size-sm;
+        color: #fcfcfc;
+        .dropdown-item:focus, .dropdown-item:hover {
+          background-color: $nav-bg;
+        }
+      }
+      label {
+        margin-bottom: 0 !important;
+        margin-left: -0.75rem;
+        min-height: 1rem;
+        margin-right: 0.5rem;
+      }
+    }
+    .list-group-item-heading:hover {
+      background: $theme;
+      .list-group-item-heading-text {
+        color: #fff;
+      }
+      .btn-dropdown {
+        color: #fff;
+        opacity: 1;
+      }
+    }
+
+    .white-space {
+      position: absolute;
+      top: 17px;
+      left: -10px;
+      bottom: 0;
+      width: 7px;
+      background: white;
+      overflow: hidden;
+    }
+  }
+  .hide {
+    display: none !important;
+  }
+
+}
+
+.mce-branding-powered-by, .bjs-powered-by {
+  display: none !important;
+}

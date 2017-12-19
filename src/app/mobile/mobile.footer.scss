@@ -1,0 +1,34 @@
+
+.footer {
+  background: #f9f9f9;
+  width: 100%;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid #c8c7cc;
+  .footer-item {
+    flex: 1;
+    height: 100%;
+    text-align: center;
+    position: relative;
+    padding-top: 0.25rem;
+    color: $m-color-dark;
+    .footer-item-icon {
+      font-size: 2rem;
+      line-height: 2rem;
+      width: 100%;
+      text-align: center;
+      display: block;
+    }
+    .footer-item-text {
+      font-size: 0.75rem;
+      width: 100%;
+      text-align: center;
+      display: block;
+    }
+  }
+  .active {
+    color: $theme;
+  }
+}

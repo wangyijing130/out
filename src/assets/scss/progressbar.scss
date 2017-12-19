@@ -1,0 +1,15 @@
+.progress {
+  border-radius: 8px;
+}
+
+.progress-bar {
+  border-radius: 8px;
+}
+
+.progress-bar:hover {
+  opacity: 0.75;
+}
+
+.thin .progress-bar {
+  height: 0.5rem;
+}

@@ -1,0 +1,69 @@
+.bg-transparent {
+  background-color: transparent;
+}
+
+.bg-theme {
+  background-color: $theme;
+}
+
+.bg-white {
+  background-color: $white;
+}
+
+.bg-pink {
+  background-color: #fcf8e3;
+}
+
+.bg-green {
+  background: $color-green-light;
+}
+
+.bg-dark {
+  background-color: $theme-bg;
+}
+
+.bg-tab {
+  background: $tab-bg;
+}
+
+.text-theme {
+  color: $theme;
+}
+
+.text-red {
+  color: red;
+}
+
+.text-link {
+  color: $link-color !important;
+}
+
+.border-theme {
+  border-color: $theme !important;
+}
+
+.border-gray {
+  border-color: $border !important;
+}
+
+.text-gray {
+  color: #A1A1A1;
+}
+
+.nav-bg {
+  background: $nav-bg;
+}
+
+.form-border {
+  display: inline-block;
+  width: 100%;
+  border: 1px solid $color-border-blue; // $color-form
+}
+
+.form-border-bottom {
+  display: inline-block;
+  width: 100%;
+  min-height: 1.25rem;
+  border: none;
+  border-bottom: 1px solid $color-border-blue; // $color-form
+}

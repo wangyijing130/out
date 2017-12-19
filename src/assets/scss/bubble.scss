@@ -1,0 +1,77 @@
+
+.bubble {
+  position: absolute;
+  padding: 2px 8px;
+  transform: translate3D(0, 0, 0);
+  background-color: #ededed;
+  color: #ededed;
+  .bubble-content {
+    text-align: center;
+    font-size: $font-size-xs;
+    color: $color-green-light;
+    padding: 0;
+    margin: 0;
+    z-index: 1;
+  }
+
+  .bubble-arrow {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    color: #ededed;
+    border-style: solid;
+    z-index: 0;
+  }
+}
+
+.bubble-radius {
+  border-radius: 2px;
+}
+
+.bubble-ellipse {
+  border-radius: 18px / 11px;
+}
+
+.bubble-up {
+  top: 0;
+  left: 50%;
+  transform: translate3D(-50%, 0, 0);
+  .bubble-arrow-left {
+    top: 100%;
+    left: 50%;
+    border-width: 0 5px 0 0;
+    border-radius: 0 0 16px;
+    border-color: transparent #ededed transparent transparent;
+    transform: translate3D(-125%, -10%, 0);
+  }
+  .bubble-arrow-right {
+    top: 100%;
+    left: 50%;
+    border-width: 0 0 0 5px;
+    border-radius: 0 0 0 16px;
+    border-color: transparent transparent transparent #ededed;
+    transform: translate3D(25%, -10%, 0);
+  }
+}
+
+.bubble-down {
+  top: 100%;
+  left: 50%;
+  transform: translate3D(-50%, 10%, 0);
+  .bubble-arrow-left {
+    top: 0;
+    left: 50%;
+    border-width: 0 5px 0 0;
+    border-radius: 0 16px 0;
+    border-color: transparent #ededed transparent transparent;
+    transform: translate3D(-125%, -95%, 0);
+  }
+  .bubble-arrow-right {
+    top: 0;
+    left: 50%;
+    border-width: 0 0 0 5px;
+    border-radius: 16px 0 0;
+    border-color: transparent transparent transparent #ededed;
+    transform: translate3D(25%, -95%, 0);
+  }
+}

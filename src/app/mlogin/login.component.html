@@ -1,0 +1,45 @@
+<div class="card border-0 relative w-100 h-100 login-form">
+    <div class="fixed-top m-header bg-theme">
+        <h6 class="text-center text-white fs-base">Login</h6>
+    </div>
+    <form name="form" #form="ngForm" class="card-block v-center-in-parent w-100" autocomplete="on">
+        <div class="form-group form-group-sm row">
+            <label class="col-form-label col-form-label-sm col-3">用户名</label>
+            <div class="col-8">
+                <input type="text" class="form-control form-control-sm" placeholder="用户名" [(ngModel)]="username" name="username"
+                       required #usernameInput="ngModel" maxlength="32"
+                       [class.shadow-invalid]="usernameInput.touched && !usernameInput.valid"/>
+            </div>
+        </div>
+        <div class="form-group form-group-sm row">
+            <label class="col-form-label col-form-label-sm col-3">密码</label>
+            <div class="col-8">
+                <input type="password" class="form-control form-control-sm" placeholder="密码" [(ngModel)]="password" name="password"
+                       required #pwdInput="ngModel" maxlength="32"
+                       [class.shadow-invalid]="pwdInput.touched && !pwdInput.valid"/>
+            </div>
+        </div>
+        <div class="form-group form-group-sm row">
+            <label class="col-form-label col-form-label-sm col-3">验证码</label>
+            <div class="col-4">
+                <input type="text" class="form-control form-control-sm" placeholder="验证码" [(ngModel)]="verification_code"
+                       name="verification_code" maxlength="4"
+                       required #codeInput="ngModel"
+                       [class.shadow-invalid]="codeInput.touched && !pwdInput.valid"/>
+            </div>
+            <div class="col-4">
+                <div class="col-sm-4 code-example">
+                    <span *ngIf="requestCodeFlag&&!codeUrl" >获取中...</span>
+                    <img [src]="codeUrl" *ngIf="codeUrl" (click)="getVerificationCode()">
+                </div>
+            </div>
+        </div>
+        <div class="form-group form-group-sm row">
+            <p>&nbsp;{{error}}</p>
+        </div>
+        <div class="form-group form-group-sm row mb-2 px-5">
+            <button class="btn btn-primary w-100 border-radius" (click)="token(form)"
+                    [class.btn-danger]="!form.valid" [disabled]="!form.valid"><span>登录</span></button>
+        </div>
+    </form>
+</div>

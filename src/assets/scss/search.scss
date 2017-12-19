@@ -1,0 +1,119 @@
+.search-list-wrap {
+  .top-button {
+    position: fixed;
+    right: 1.25%;
+    top: 148px;
+    z-index: 0;
+    text-align: right;
+  }
+  .card-header-right {
+    position: absolute;
+    right: 1.25%;
+    top: 50%;
+    width: 50%;
+    transform: translate3d(0, -50%, 0);
+    text-align: right;
+    font-size: $font-size-sm;
+    font-weight: normal;
+    .header-search-input {
+      width: 75%;
+      height: 30px;
+      border: 1px solid #ddd;
+      overflow: hidden;
+      border-radius: 5px;
+      flex: 1;
+      position: relative;
+      font-size: $font-size-sm;
+      color: $color-dark;
+      > input {
+        width: 100%;
+        height: 100%;
+        border: 0;
+        padding: 0 0.5rem;
+      }
+      > a {
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 50px;
+        text-align: center;
+        border-left: 1px solid #eee;
+        line-height: 1.75rem;
+      }
+      > a:hover {
+        color: $theme;
+        background: #eee;
+      }
+    }
+    .header-search-input:hover {
+      border: solid 1px $theme;
+    }
+    .header-search-btn {
+      flex-basis: 80px;
+      width: 80px;
+      border: 0;
+      background: transparent;
+      padding: 0;
+      a {
+        font-size: $font-size-sm;
+        color: #222;
+        border-bottom: 2px solid #222;
+      }
+      a:hover {
+        color: $theme;
+        border-bottom: 2px solid $theme;
+      }
+    }
+    .header-search-icon {
+      flex-basis: 24px;
+      width: 24px;
+    }
+  }
+
+  .card-header-dark {
+    background: $theme-bg;
+    color: #e6e6e6;
+    .card-header-right {
+      .header-search-input {
+        border: none;
+        padding: 0;
+        border-bottom: 1px solid #d9dde1;
+        border-radius: 0;
+        height: 24px;
+        input {
+          background: transparent;
+          color: #e6e6e6;
+        }
+        a {
+          border: 0;
+          color: #e6e6e6;
+          width: auto;
+          padding: 0 0.25rem;
+        }
+        a:hover {
+          background: transparent;
+          color: $theme;
+        }
+      }
+      .header-search-btn {
+        a {
+          color: #e6e6e6;
+          border-bottom: 0;
+          background: transparent;
+        }
+        a:hover {
+          color: $theme;
+        }
+      }
+    }
+  }
+  .high-search {
+    background: #ffffff;
+    border: 1px solid #eee;
+    border-bottom: none;
+    width: 100%;
+    padding: 0 0.5rem 2rem 0.5rem;
+    margin: 0 auto;
+  }
+}

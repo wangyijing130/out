@@ -1,0 +1,18 @@
+<div class="center pagination-wrap">
+    <div class="pagination-before">
+        <select class="form-control form-control-sm" [(ngModel)]="pageSize" (change)="_onPageSizeChange()">
+            <option *ngFor="let p of pageSizeAry" value={{p}}>{{p}}</option>
+        </select>
+    </div>
+    <div class="pagination-mid">
+        <ngb-pagination [collectionSize]="collectionSize" [page]="pageNo" [pageSize]="pageSize"
+                        (pageChange)="_onPageChange($event)" [maxSize]="maxSize" [rotate]="true" [boundaryLinks]="true"
+                        size="sm"></ngb-pagination>
+    </div>
+    <div class="pagination-after center">
+        共{{(totalPage)}}页&#12288;&#12288;到第
+        <input class="form-control form-control-sm" type="number" min="1" [max]="totalPage" [(ngModel)]="jumpPage">
+        页&#12288;
+        <a class="btn btn-sm btn-white border-radius" (click)="jump()">确&nbsp;定</a>
+    </div>
+</div>
